@@ -13,7 +13,7 @@ Itinerary Generator takes the information from external APIs and user inputs to 
 ## 2) Entity Relationship (ER) Diagram
 ![High-level Component Diagram](NAwayfarer_entity_diagram.png)
 
-The ERD consists of two entities, User_profile and Itinerary, which represent the data for users and their travel plans.
+The ER Diagram consists of two entities, User_profile and Itinerary, which represent the data for users and their travel plans.
 User_profile has attributes to store the user's unique ID, username, email, and names.
 Itinerary holds travel details, linked to User_profile via a foreign key to the user's ID, and includes information such as itinerary ID, travel dates, city, number of travelers, budget, and travel status.
 The relationship is one-to-many, each user can have multiple itineraries but each itinerary is associated with a single user. This setup allows for the organization and retrieval of travel plans by user within a database system.
