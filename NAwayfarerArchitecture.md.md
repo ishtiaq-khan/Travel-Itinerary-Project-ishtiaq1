@@ -1,4 +1,4 @@
-# NAwayfarerArchitecture
+# NAwayfarer Architecture
 
 ## 1) High-level Component Diagram
 
