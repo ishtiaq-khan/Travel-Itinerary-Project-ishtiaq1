@@ -38,7 +38,13 @@ jobs:
       working-directory: travel_itinerary  
 
     - name: Install test dependencies
-      run: pip install pytest
+      run: |
+        pip install pytest
+        pip install pytest-django  # Add this line
+
+    - name: Test with pytest
+      run: pytest
+      working-directory: travel_itinerary
 
     - name: Install flake8
       run: pip install flake8
