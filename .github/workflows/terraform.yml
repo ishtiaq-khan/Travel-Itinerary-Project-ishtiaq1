@@ -39,7 +39,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan
         working-directory: ./travel_itinerary/terraform
+        
       - name: Terraform Apply
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
-        working-directory: ./terraform
+        working-directory: ./travel_itinerary/terraform
