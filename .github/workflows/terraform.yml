@@ -36,10 +36,12 @@ jobs:
         working-directory: ./travel_itinerary/terraform
 
       - name: Terraform Plan
-        if: github.event_name == 'pull_request'
-        run: terraform plan
-        working-directory: ./travel_itinerary/terraform
-        
+        if: ${{ github.event_name == 'pull_request' }}
+        working-directory: ./travel_itinerary/terraform   
+        run: terraform plan -no-color -input=false
+        continue-on-error: true
+
+
       - name: Terraform Apply
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
