@@ -46,6 +46,10 @@ jobs:
     
     - name: Install Selenium
       run: pip install selenium  
-      
+
+    - name: Set DJANGO_SETTINGS_MODULE
+      run: export DJANGO_SETTINGS_MODULE=your_project_name.settings
+      working-directory: travel_itinerary
+
     - name: Test with pytest
       run: pytest
