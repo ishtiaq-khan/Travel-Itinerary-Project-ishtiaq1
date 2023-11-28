@@ -37,6 +37,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
       working-directory: travel_itinerary  
+
+    - name: Install Selenium
+      run: pip install selenium
       
     - name: Install test dependencies
       run: |
@@ -54,5 +57,4 @@ jobs:
     - name: Lint with flake8
       run: flake8 . --count --select=E9,F63,F7,F82 --exclude=./travel_itinerary/.venv --show-source --statistics  
     
-    - name: Install Selenium
-      run: pip install selenium
+    
