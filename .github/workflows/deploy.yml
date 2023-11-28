@@ -44,11 +44,10 @@ jobs:
       - name: Upload application file to AWS S3
         run: aws s3 cp app_deploy-${{ github.sha }}.zip s3://nawayfarer-ishtiaq-khan/
 
-      # Create a new application version in AWS Elastic Beanstalk
       - name: Create new application version
         run: |
             aws elasticbeanstalk create-application-version \
-            --application-name NAwayfarerEnv \
+            --application-name nawayfarer \
             --source-bundle S3Bucket="nawayfarer-ishtiaq-khan",S3Key="app_deploy-${{ github.sha }}.zip" \
             --version-label "ver-${{ github.sha }}"
             
