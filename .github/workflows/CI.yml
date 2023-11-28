@@ -44,7 +44,7 @@ jobs:
       working-directory: travel_itinerary
       
     - name: Test with pytest
-      run: pytest ./travel_itinerary/travel_itinerary_app/tests
+      run: pytest travel_itinerary_app/tests
       working-directory: travel_itinerary
 
     - name: Install flake8
