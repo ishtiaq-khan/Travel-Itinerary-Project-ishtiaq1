@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ ishtiaq-deploy ]
   pull_request:
-    branches: [ main ]
+    branches: [ ishtiaq-deploy ]
 
 jobs:
   build:
