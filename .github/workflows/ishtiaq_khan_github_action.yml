@@ -3,7 +3,7 @@ name: ishtiaq_khan_github_action
 on:
   pull_request:
     branches:
-      - main
+      - automation-test
   workflow_dispatch:
 
 jobs:
