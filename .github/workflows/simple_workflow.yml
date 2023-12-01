@@ -1,0 +1,17 @@
+name: Simple Workflow on automation-test Branch
+
+on:
+  push:
+    branches:
+      - automation-test  # This specifies that the action should run on pushes to the 'automation-test' branch
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest  # Specifies the type of runner for the job
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # Checks out your repository under $GITHUB_WORKSPACE
+
+    - name: Print a greeting
+      run: echo "Hello, world! This is a simple GitHub Actions workflow on the automation-test branch."
