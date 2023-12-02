@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
-class ViewTestCase(TestCase):
+class ViewTestCase(TestCase): 
     def setUp(self):
         self.signup_url = reverse('signup')
         self.user_data = {
