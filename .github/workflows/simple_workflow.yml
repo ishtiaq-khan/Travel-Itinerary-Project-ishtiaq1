@@ -1,0 +1,16 @@
+name: Simple Workflow on automation-test Branch
+
+on:
+  push:
+    branches:
+      - ishtiaq_tests 
+jobs:
+  greeting:
+    runs-on: ubuntu-latest 
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2   
+
+    - name: Print a greeting
+      run: echo "Hello, world! This is a simple GitHub Actions workflow on the automation-test branch."
