@@ -1,7 +1,7 @@
 name: ishtiaq_khan_github_action
 
 on:
-  push:
+  pull_request:
     branches:
       - ishtiaq_tests
   workflow_dispatch:
